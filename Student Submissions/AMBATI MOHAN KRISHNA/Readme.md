@@ -1,11 +1,11 @@
-#AMBATI MOHAN KRISHNA 
+###AMBATI MOHAN KRISHNA 
 
 ### Basic Information
 
-####. College : Dadi institute Of Engineering And Technology
-####. Branch : CSE-Data Science
-####. Year : IV Year
-####. Batch : 2022-2026
+#### College : Dadi institute Of Engineering And Technology
+#### Branch : CSE-Data Science
+#### Year : IV Year
+#### Batch : 2022-2026
 
 ### Github Profile
 
