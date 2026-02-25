@@ -1,3 +1,17 @@
+# Kollipara Jyothi Swaroop Sai
+
+# Basic Information
+
+College: Prasad V Potluri Siddhartha Institute Of Technology, Vijayawada
+Branch: B.Tech – Data Science
+Year: Pre-Final Year
+Batch: 2023 - 2027
+Infosys Batch - 11
+
+# GitHub Profile - https://github.com/SwaroopSai23
+
+
+
 # 📊 **Visualizing US Natural Disaster Declarations**
 **(FEMA Dataset – End-to-End Data Analytics Project)**
 
