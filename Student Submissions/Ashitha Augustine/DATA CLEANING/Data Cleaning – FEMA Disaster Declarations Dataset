@@ -1,0 +1,121 @@
+# 🧹 Data Cleaning – FEMA Disaster Declarations Dataset
+
+
+
+This document explains the **step-by-step process** used to clean the FEMA Disaster Declarations dataset, preparing it for analysis and visualization in **Power BI**.
+
+---
+
+## 1️⃣ Load Raw Data
+**Action:**  
+- Imported the raw FEMA dataset into **Power Query Editor**.  
+- Source contained unstructured text, inconsistent formatting, and irrelevant fields.  
+
+**Purpose:**  
+- Provides a starting point for structured cleaning and analysis.
+
+---
+
+## 2️⃣ Review Column Structure
+**Key columns identified for analysis:**
+
+| Column Name                       | Description |
+|----------------------------------|-------------|
+| `disaster_number`                 | FEMA disaster ID |
+| `state`                           | State affected |
+| `declaration_type`                | Type of declaration |
+| `declaration_date`                | Date of declaration |
+| `fy_declared`                     | Fiscal year declared |
+| `incident_type`                   | Disaster type (Flood, Tornado, etc.) |
+| `declaration_title`               | Official title of the disaster |
+| `ih_program_declared`             | Individual Housing program declared (1 = yes, 0 = no) |
+| `ia_program_declared`             | Individual Assistance program declared |
+| `pa_program_declared`             | Public Assistance program declared |
+| `hm_program_declared`             | Hazard Mitigation program declared |
+| `incident_begin_date`             | Disaster start date |
+| `incident_end_date`               | Disaster end date |
+| `disaster_closeout_date`          | Closeout date |
+| `tribal_request`                  | Whether tribal request was made |
+| `fips`, `place_code`, `designated_area` | Location codes |
+| `region`                          | FEMA region |
+| `designated_incident_types`       | Multiple disaster types if applicable |
+| `id`                              | Unique row identifier |
+
+---
+
+## 3️⃣ Replace Values (Text Standardization)
+**Action:**  
+- Removed unwanted characters such as underscores (_) and hyphens (-).  
+- Replaced null or empty values in categorical fields (`state`, `incident_type`, `region`) with `"Unknown"`.
+
+**Purpose:**  
+- Ensures **uniform categorization** for filtering, grouping, and aggregation in Power BI.
+
+## 4️⃣ Filter Rows (Data Quality Control)
+
+### 🔹 Action:
+- Removed rows with null, blank, or invalid critical values (e.g., missing `disaster_number` or `incident_type`).
+- Excluded records that could not provide meaningful insights.
+
+### 🎯 Purpose:
+Ensures **accuracy and relevance** of the dataset.
+
+---
+
+## 5️⃣ Change Type (Data Type Conversion)
+
+| Column | New Type | Purpose |
+|---------|----------|----------|
+| `declaration_date` | Date | Sort and filter by date |
+| `incident_begin_date` | Date | Timeline analysis |
+| `incident_end_date` | Date | Timeline analysis |
+| `disaster_number`, `id` | Whole Number | Enable calculations and relationships |
+| `ih_program_declared`, `ia_program_declared`, `pa_program_declared`, `hm_program_declared` | Whole Number | KPI calculations |
+| `last_ia_filing_date` | Date | Compliance tracking |
+
+### 🎯 Purpose:
+Enables **correct calculations, filtering, and visualizations** in Power BI dashboards.
+
+---
+
+## 6️⃣ Remove Columns (Irrelevant Data Elimination)
+
+### 🔹 Columns Removed:
+- `fema_declaration_string`
+- `hash`
+- `last_refresh`
+- `declaration_request_number`
+
+### 🎯 Purpose:
+- Reduces clutter  
+- Improves dataset performance  
+- Focuses only on actionable and analytical fields  
+
+---
+
+
+# ✅ Final Cleaned Dataset
+
+- ✔️ Standardized column formats  
+- ✔️ No null or inconsistent key values  
+- ✔️ Categorical fields standardized (`state`, `incident_type`, `region`)  
+- ✔️ Correct numeric and date types for calculations  
+- ✔️ Irrelevant fields removed for better performance  
+
+---
+
+# ✅ Outcome
+
+- 📊 Accurate comparison of disasters across **states, regions, and fiscal years**
+- 🔎 Reliable filtering and segmentation using standardized categorical fields
+- 🧮 Error-free calculations due to validated numeric fields
+- ⚡ Improved report performance and faster dashboard loading
+- 📈 Clear, structured input for advanced Power BI visuals and insights
+
+---
+
+# 🧰 Tools Used
+
+- **Power BI**
+- **Power Query Editor** (Data Cleaning & Transformation)
+  
