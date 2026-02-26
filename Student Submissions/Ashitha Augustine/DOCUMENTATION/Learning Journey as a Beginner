@@ -1,0 +1,192 @@
+## 📘 Learning Journey as a Beginner
+As a beginner in data analytics, this project represents my first structured hands-on experience with data cleaning, analysis, and visualization. Working with tools like Power BI, Power Query, Python, APIs, and live data sources was initially challenging, especially dealing with unfamilia words and tools ,handling large raw data, managing missing values and correcting data types
+
+Over four weeks, I progressed through each stage of the data analytics lifecycle—from basic data cleaning to exploratory data analysis and finally working with APIs and data pipelines. This documentation captures both what I learned and how my confidence grew while applying industry-relevant tools to a real-world dataset.
+### 📅 Week 1: Project Introduction & Basic Data Cleaning
+#### 🔍 Overview
+* Gained a foundational understanding of the project objectives and dataset structure.
+* Learned the importance of data cleaning as the first step in any data analytics project.
+#### 🧹 Tools Introduced
+* Power BI
+* Power Query Editor
+* Python (Basics)
+#### 🪜 Key Learning & Steps
+* Imported raw data into Power BI
+* Reviewed dataset structure and column relevance
+* Removed unnecessary and empty columns
+* Filtered invalid and missing records
+* Cleaned text fields using Replace Values
+* Corrected data types (date, time, numeric)
+* Performed basic cleaning using Python for comparison
+#### 🎯 Outcome
+* Developed a clear understanding of structured vs unstructured data
+* Prepared a clean, analysis-ready dataset
+### 📅 Week 2: Advanced Data Cleaning Using Python
+#### 🔍 Overview
+* Focused on in-depth data cleaning and transformation using Python.
+* Learned how Python enables automation and scalability in data preprocessing.
+####  🛠 Tools & Libraries
+* Python
+* Pandas
+* NumPy
+#### 🪜 Key Learning & Steps
+* Loaded datasets using Pandas
+* Identified missing values and duplicates
+* Handled null values using imputation and filtering
+* Standardized categorical data
+* Removed outliers and inconsistent records
+* Renamed and reformatted columns
+* Validated data quality through checks
+#### 🎯 Outcome
+* Built confidence in handling large datasets
+* Learned reproducible and reusable data-cleaning workflows
+### 📅 Week 3: Exploratory Data Analysis (EDA) & API Fundamentals
+#### 🔍 Overview
+* Explored data patterns and relationships using EDA techniques.
+* Learned how APIs provide structured access to live and external data sources.
+#### 🛠 Tools & Concepts
+* Python
+* EDA Techniques
+* APIs
+#### 🪜 Key Learning & Steps
+* Understood API concepts (endpoint, request, response)
+* Explored real-time data concept
+* steps in performing EDA 
+#### 🎯 Outcome
+* Gained insights into data behavior
+* Understood how external data can enhance analysis
+### 📅 Week 4: Data Pipelines, Live Data & Advanced Sources
+#### 🔍 Overview
+* Learned the concept APL pipelines.
+* Explored real-time, synthetic, and customer-support data sources.
+#### 🛠 Tools & Technologies
+* APIs
+* Web Scraping
+* Live Data Sources
+* Zendesk
+* Python
+#### 🪜 Key Learning & Steps
+* concepts of dummy and synthetic data for testing
+* Explored Zendesk data for support analytics
+* Compared static vs live data sources
+* Challenges of using live data 
+#### 📌 Why These Data Sources Matter
+
+* Live data: Enables real-time decision-making
+
+* Synthetic/Dummy data: Useful for testing without privacy risks
+
+* Web scraping: Accesses data when APIs are unavailable
+
+* Zendesk: Provides customer interaction insights
+
+#### 🎯 Outcome
+* Learned scalable data engineering concepts
+* Understood real-world data acquisition challenges and solutions
+### 🌟 Overall Learning Outcome
+* Gained hands-on experience in data cleaning and preprocessing using both Power BI and Python
+* Learned to work with real-world datasets and handle missing values, inconsistencies, and unstructured data
+* Improved proficiency in Exploratory Data Analysis (EDA) to identify patterns, trends, and anomalies
+* Understood how APIs function, including making requests, handling responses, and transforming JSON data
+* Built foundational knowledge of data pipelines and automated data workflows
+* Learned the difference between static, live, dummy, and synthetic data, and when each is appropriate
+* Gained exposure to web scraping techniques when APIs are unavailable
+* Developed an understanding of customer support data through tools like Zendesk.
+* Improved problem-solving skills through debugging, data validation, and iterative improvements
+* Strengthened confidence in using industry-relevant tools and technologies
+### 🛠 Tools Used Throughout the Project
+* Power BI
+* Power Query Editor
+* Python
+* Pandas & NumPy
+* APIs
+* Web Scraping
+### 📅 Week 5 :Data Modeling & Star Schema Design
+#### 🎯 Focus:
+Building a proper data model and establishing relationships.
+#### ✅ Key Activities:
+* Imported landslide dataset into Power BI.
+* Cleaned data types (converted text to numeric where required).
+* Handled missing values (replaced "Unknown" with null).
+* Designed Star Schema model:
+   * Created Fact Table (Global_Landslide_Catalog).
+   * Created Dimension tables (Country, Date, Category, etc.).
+   * Established One-to-Many relationships.
+   * Understood why Many-to-Many relationships cause ambiguity.
+
+#### 🧠 Key Learning:
+* Importance of Star Schema for performance and scalability.
+* Difference between Fact and Dimension tables.
+* How filter context flows in relationships.
+* Why numeric columns must not contain text values.
+### 📅 Week 6 :DAX Measures & Composite Measures
+#### 🎯 Focus:
+Creating business metrics using DAX.
+#### ✅ Key Measures Created:
+* Total Events
+* Total Fatalities
+* Total Injuries
+* Average Distance
+* Total Impact
+#### 🔥 Composite Measures:
+* Fatality Rate per Event
+* Impact Severity Index
+* Distance per Event
+#### 🧠 Key Learning:
+* Difference between Measures vs Calculated Columns.
+* Understanding Filter Context vs Row Context.
+* Use of DIVIDE() instead of / to avoid errors.
+* Creating meaningful KPIs from raw numbers.
+### 📅 Week 7 – Visualization & Dashboard Creation
+
+#### 🎯 Learning Objectives
+- Understanding different Power BI visualizations
+- Learning dashboard layout design principles
+- Creating interactive reports using slicers
+- Building KPI cards and summary metrics
+
+---
+
+#### 📊 Topics Covered
+
+##### 🔹 Data Visualization
+- Bar Charts
+- Line Charts
+- Map Visualizations
+- KPI Cards
+- Slicers and Filters
+
+##### 🔹 Dashboard Design Principles
+- Visual hierarchy
+- Proper spacing and alignment
+- Consistent color theme
+- Minimal and clean layout
+
+---
+
+#### 🛠️ Practical Implementation
+
+- Imported cleaned dataset into Power BI.
+- Created calculated measures using DAX.
+- Designed KPI section (Total Events, Fatalities, Fatalities per Event).
+- Added slicers for country, year, and risk zone filtering.
+- Structured the dashboard for better storytelling.
+
+---
+
+#### 📈 Outcome
+
+Successfully developed an interactive dashboard that:
+- Analyzes disaster trends.
+- Identifies high-risk regions.
+- Highlights key performance indicators.
+- Enables dynamic filtering and analysis.
+
+---
+
+#### 💡 Key Takeaways
+
+- Effective visualization improves data storytelling.
+- Proper alignment and formatting enhance professionalism.
+- KPIs help summarize complex datasets clearly.
+#### ✨ This documentation reflects my hands-on learning experience and practical exposure to modern data analytics techniques.
