@@ -1,0 +1,66 @@
+Infosys Internship Program Documentation
+Project: Visualizing US Natural Disaster Declarations
+
+Intern Name: Onkar Devkar  
+Mentor: Akshay sir
+Program: Data Visualization Internship - Infosys
+
+---
+
+Program Overview
+
+This internship is a comprehensive, hands-on data analysis program focused on real-world project execution through the visualization and analysis of US natural disaster declarations. The program emphasizes collaborative problem-solving, mentored guidance, and practical application of data science methodologies in a professional environment.
+
+Program Structure
+- Duration: 8 weeks intensive program
+- Format: Daily collaborative sessions 
+- Approach: Learning by doing with immediate feedback and iterative improvement
+- Focus: Real-world data challenges and professional development practices
+
+Professional Standards
+- Punctuality and consistent attendance
+- Proactive communication via email for all official matters
+- Prior notification required for leave (otherwise marked absent)
+- High professional decorum and respectful collaboration
+- Quality deliverables and thorough documentation
+- Commitment to continuous learning and improvement
+
+---
+
+Week 1: Foundation Building & Internship Overview
+
+Overview
+The first week establishes the foundation for the entire internship through team formation, project orientation, and alignment of expectations. This week sets the tone for professional conduct, establishes working relationships, and provides a comprehensive understanding of the project scope and deliverables.
+
+Learning Objectives
+- Understand complete project scope and deliverable expectations
+- Align on professional standards and communication protocols
+- Establish team dynamics and collaboration strategies
+- Set up development environment
+- Identify knowledge gaps and learning goals
+- Understand the significance of natural disaster data analysis
+
+Key Topics Covered
+
+Project Introduction:
+- Understanding US natural disaster declarations and their importance
+- Historical context of FEMA disaster declarations
+- Real-world applications of disaster data analysis
+- Impact on emergency management and resource allocation
+- Climate patterns and trends analysis
+
+Team Alignment:
+- Individual introductions and background sharing
+- Learning goals and expectations discussion
+- Role clarification and responsibility assignment
+- Collaboration tools and communication channels
+- Ground rules for effective teamwork
+
+Key Outcomes
+- Clear understanding of 8-week roadmap
+- Established team support and trust
+- Aligned expectations between mentor and interns
+- Prepared mindset for technical work ahead
+- Foundation for professional collaboration
+
+---

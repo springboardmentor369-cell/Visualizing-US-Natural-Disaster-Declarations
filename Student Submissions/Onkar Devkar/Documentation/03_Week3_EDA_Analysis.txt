@@ -1,0 +1,56 @@
+Week 3: Exploratory Data Analysis (EDA)
+
+Overview
+Week 3 transitions from data preparation to data understanding through comprehensive Exploratory Data Analysis. Participants learn to explore, visualize, and extract meaningful insights from the cleaned disaster dataset using statistical and visual techniques.
+
+Learning Objectives
+- Master statistical analysis techniques for data exploration
+- Create effective visualizations revealing patterns and insights
+- Identify relationships and correlations between variables
+- Recognize temporal and spatial patterns in disaster data
+- Formulate and test data-driven hypotheses
+- Communicate findings through visual storytelling
+- Understand disaster trends and patterns across US
+
+Key Topics Covered
+
+Statistical Analysis:
+- Descriptive statistics (mean, median, mode, standard deviation, variance)
+- Distribution analysis and normality testing
+- Correlation and covariance analysis
+- Statistical significance testing
+- Confidence intervals and hypothesis testing
+- Time series analysis fundamentals
+
+Univariate Analysis:
+- Analyzing individual variables in isolation
+- Frequency distributions for categorical data
+- Numerical data distribution patterns
+- Identifying central tendency and spread
+- Detecting skewness and kurtosis
+- Box plots and outlier visualization
+- Histograms and density plots
+
+Bivariate Analysis:
+- Exploring relationships between variable pairs
+- Scatter plots for numerical relationships
+- Correlation coefficients interpretation
+- Cross-tabulation for categorical variables
+- Grouped comparisons and contrasts
+- Trend identification and pattern recognition
+
+Business-Oriented Understanding using Sales Data:
+- EDA is not just charts and statistics.
+
+From a business perspective, EDA answers one core question:
+- “What is actually happening in my business, and why?”
+
+Before any ML model or dashboard, EDA helps decision-makers understand:
+- Where money is coming from
+- What products/regions/customers are driving performance
+- What risks or opportunities exist
+- What trends are emerging over time
+
+Think of EDA as business diagnosis 🔍.
+
+---

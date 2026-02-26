@@ -1,0 +1,205 @@
+1. Executive Summary
+
+Week 4 focused on moving from static datasets to live and automated data handling. During this week, I learned how to fetch data using APIs, understood the basics of the Zendesk platform, and practiced professional version control using Git and GitHub. This week helped in understanding how real-world data systems work in production environments.
+
+2. Learning Objectives
+
+Understand how APIs work and how to connect them using Python
+
+Learn secure handling of API credentials
+
+Fetch live data from public APIs
+
+Understand Zendesk platform and its data structure
+
+Use Git and GitHub for version control
+
+Organize project files in a professional manner
+
+Maintain proper technical documentation
+
+3. API Fundamentals
+3.1 What is an API?
+
+An API (Application Programming Interface) allows applications to communicate with each other. APIs are commonly used to fetch live data from external platforms.
+
+Key Concepts Learned:
+
+REST APIs follow a client-server model
+
+Common HTTP methods:
+
+GET – retrieve data
+
+POST – send data
+
+PUT – update data
+
+DELETE – remove data
+
+APIs return responses mostly in JSON format
+
+3.2 API Authentication & Security
+
+To access APIs securely, authentication is required.
+
+Methods Used:
+
+API Keys (FEMA, NOAA, Census)
+
+API Tokens (Zendesk)
+
+Best Practices Followed:
+
+API keys were stored in environment variables
+
+.env file was added to .gitignore
+
+Keys were never hardcoded in scripts
+
+Credentials were accessed using os.getenv()
+
+3.3 API Requests & Error Handling
+
+API requests were made using Python requests library
+
+JSON responses were converted into Pandas DataFrames
+
+Basic error handling was implemented for:
+
+Timeout errors
+
+Invalid requests
+
+Server errors
+
+3.4 Rate Limits & Pagination
+
+API rate limits were respected
+
+Requests were delayed using time.sleep()
+
+Pagination was handled to fetch large datasets
+
+4. Live Data Import
+4.1 FEMA OpenFEMA API
+
+Disaster declaration data was fetched using OpenFEMA API
+
+Data was filtered by date and disaster type
+
+Incremental data loading approach was followed
+
+4.2 NOAA Climate API
+
+Climate data such as rainfall and temperature was collected
+
+Data was linked with disaster events for better analysis
+
+4.3 Census Bureau API
+
+Population data was fetched at state and county level
+
+Used to normalize disaster impact by population
+
+5. Automated Data Pipeline
+
+Python scripts were created to automate data fetching
+
+Data validation checks were added
+
+Logs were generated for tracking execution status
+
+Pipeline was designed to be reusable and scalable
+
+6. Zendesk Platform Overview
+6.1 Understanding Zendesk
+
+Zendesk is a customer support ticketing system used by organizations.
+
+Key Components:
+
+Tickets
+
+Users
+
+Organizations
+
+Agents
+
+Learning Outcome:
+
+Understood how ticket data can be analyzed
+
+Learned how Zendesk data can be used in analytics
+
+7. Git & GitHub Usage
+7.1 Git Basics
+
+Initialized Git repository
+
+Used basic commands:
+
+git add
+
+git commit
+
+git push
+
+git pull
+
+7.2 Branching & Collaboration
+
+Used main and feature branches
+
+Raised pull requests
+
+Resolved merge conflicts
+
+Followed clean commit message practices
+
+8. Project Folder Structure
+project/
+├── Data/
+├── Data Cleaning/
+├── Power BI/
+├── Visuals/
+├── Documentation/
+├── README.md
+├── .gitignore
+└── requirements.txt
+
+
+This structure helped keep the project organized and easy to maintain.
+
+9. Tools & Technologies Used
+
+Python
+
+Pandas, NumPy
+
+Requests library
+
+Power BI Desktop
+
+Git & GitHub
+
+FEMA, NOAA, Census APIs
+
+Zendesk (overview)
+
+10. Key Outcomes of Week 4
+
+Learned how to work with live APIs
+
+Understood secure API credential handling
+
+Built automated data fetching scripts
+
+Gained hands-on experience with GitHub
+
+Improved understanding of production-level workflows
+
+11. Conclusion
+
+Week 4 was an important step towards real-world data engineering practices. It helped in understanding how live data is collected, secured, version-controlled, and prepared for analysis. These skills strengthened the overall project and prepared the foundation for advanced visualization and reporting.

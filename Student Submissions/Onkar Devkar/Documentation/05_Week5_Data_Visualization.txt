@@ -1,0 +1,174 @@
+Importance of Understanding Data Types Before Visualization
+
+Before creating any visualization, it is extremely important to identify and understand the data types present in the dataset. Visualization quality does not start with charts—it starts with data understanding. Incorrect identification of data types can lead to wrong chart selection, misleading insights, and incorrect business conclusions.
+
+Every dataset contains different types of data such as categorical, numerical, and time-based data. Each data type behaves differently during aggregation, filtering, and visualization. Therefore, understanding data types is the first step in the visualization process.
+
+Why Data Types Matter Before Visualization
+
+Understanding data types before visualization helps in:
+
+Selecting the correct chart for analysis
+
+Avoiding incorrect aggregation (such as summing text-based fields)
+
+Ensuring accurate trend and comparison analysis
+
+Preventing misleading visuals and misinterpretation
+
+Improving clarity and readability of dashboards
+
+When data types are correctly identified, visuals become more meaningful and aligned with analytical objectives.
+
+Common Data Types Used in Visualization
+1. Categorical Data
+
+Categorical data represents qualitative information such as state names, disaster types, or regions. This type of data is best visualized using bar charts, column charts, or pie charts (with limited categories). Using incorrect charts for categorical data can reduce readability.
+
+2. Numerical Data
+
+Numerical data represents measurable quantities such as counts, totals, or amounts. This data type supports aggregation operations like sum, average, minimum, and maximum. Numerical data is commonly visualized using bar charts, KPIs, or cards.
+
+3. Date and Time (Time-Based) Data
+
+Time-based data represents information recorded over intervals such as days, months, or years. This data type is crucial for trend analysis and pattern detection. Time-based data must always be sorted chronologically and is best visualized using line charts or area charts.
+
+Consequences of Ignoring Data Types
+
+If data types are not considered before visualization:
+
+Charts may show incorrect trends
+
+Aggregations may be misleading
+
+Time-series analysis may become inaccurate
+
+Dashboards may confuse users
+
+Business decisions may be based on faulty insights
+
+Thus, understanding data types is essential to maintain analytical accuracy.
+
+Data Type Validation Before Visualization
+
+Before building visuals, the following checks should be performed:
+
+Verify column data types in Power BI (Text, Number, Date)
+
+Check if date columns are correctly recognized as Date/Time
+
+Validate categorical values for consistency
+
+Ensure numerical columns are not stored as text
+
+Review aggregation behavior for each field
+
+These validation steps reduce errors and improve dashboard reliability.
+
+Relationship Between Data Types and Chart Selection
+
+Chart selection should always be driven by data types:
+
+Time-based data → Line chart
+
+Categorical vs numerical → Bar or column chart
+
+Proportion of whole → Pie or donut chart (≤ 5 categories)
+
+Correct mapping between data types and charts ensures better storytelling and insight delivery.
+
+Integration with Data Modeling
+
+Understanding data types also improves data modeling. Fact tables mainly contain numerical and date fields, while dimension tables contain categorical attributes. Correct data typing ensures proper relationships, filter propagation, and accurate DAX calculations.
+
+Key Takeaway
+
+Understanding data types before creating any visualization is a mandatory analytical step, not an optional one. It ensures correct chart selection, accurate aggregation, and meaningful insights. Visualization built on properly understood data types leads to high-quality, trustworthy dashboards.
+
+5. Pie Chart Usage Guidelines
+
+Pie charts are used to represent proportions of a whole. However, they have strict limitations:
+
+A pie chart should not contain more than 5 categories in a single feature
+
+Too many slices reduce readability and visual clarity
+
+The total proportion in a pie chart should always equal 100%
+
+If proportions exceed 100%, it indicates a data aggregation or calculation mistake
+
+Pie charts are best used for high-level summaries rather than detailed analysis.
+
+6. Line Charts for Time Series Analysis
+
+Line charts are ideal for visualizing time series data. They effectively show trends, patterns, and fluctuations over time.
+
+Line charts are used when:
+
+Data is continuous over time
+
+The objective is to identify growth, decline, or seasonal patterns
+
+Time intervals such as years or months are involved
+
+In disaster analysis, line charts help track changes in disaster declarations across years.
+
+7. Fact Tables and Dimension Tables
+
+Power BI data modeling is based on separating data into fact tables and dimension tables.
+
+Fact Tables store quantitative data such as counts, amounts, or measurements
+
+Dimension Tables (also referred to as directional or lookup tables) store descriptive attributes such as state, date, or category
+
+This separation improves model performance, clarity, and scalability.
+
+8. Importance of Data Modeling
+
+A well-structured data model ensures accurate analysis and correct filter behavior. Proper relationships between fact and dimension tables allow slicers and filters to work correctly across visuals. Poor modeling can lead to incorrect calculations and inconsistent insights.
+
+9. Model View in Power BI
+
+The Model View in Power BI provides a visual representation of tables and their relationships.
+
+Using Model View, we can:
+
+Define relationships between tables
+
+Identify cardinality (one-to-many, many-to-one)
+
+Set filter directions
+
+Detect inactive or missing relationships
+
+Model View is essential for validating the data structure before creating measures and visualizations.
+
+10. Best Practices for Visualization Design
+
+Choose charts based on data type and analytical goal
+
+Avoid overcrowding visuals with too many categories
+
+Ensure correct aggregation and proportions
+
+Use consistent colors and labels
+
+Validate data model relationships before building visuals
+
+11. Key Learnings
+
+Time-based data requires appropriate chronological visuals
+
+Chart selection depends on data type
+
+Pie charts should be used sparingly and carefully
+
+Line charts are best for trend analysis
+
+Fact and dimension tables improve data organization
+
+Model View is critical for accurate Power BI reporting
+
+12. Conclusion
+
+Understanding the basics of data visualization is essential for building effective dashboards. By correctly identifying data types, selecting suitable charts, and maintaining a well-structured data model, Power BI reports become more accurate, readable, and impactful. These visualization fundamentals provide the foundation for advanced analytics and storytelling in real-world business scenarios.

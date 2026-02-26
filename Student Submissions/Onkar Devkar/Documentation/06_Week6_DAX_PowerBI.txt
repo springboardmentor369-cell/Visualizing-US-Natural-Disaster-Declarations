@@ -1,0 +1,132 @@
+1. Executive Summary
+
+Week 6 focused on developing analytical intelligence within Power BI using DAX (Data Analysis Expressions). This phase emphasized understanding how calculations are created, controlled, and optimized in Power BI to build dynamic and business-driven dashboards. The week covered the conceptual foundations of DAX, differences between implicit and explicit measures, the importance of measures over simple drag-and-drop aggregations, and the use of key DAX functions such as CALCULATE and IF. By the end of this week, the project transitioned from static visual reporting to logic-driven, interactive analytics capable of responding dynamically to user filters and slicers.
+
+2. Learning Objectives
+
+Understand the role of DAX in Power BI analytics
+
+Learn why measures are preferred over implicit aggregations
+
+Distinguish between implicit and explicit DAX measures
+
+Create base and composite measures using existing columns and measures
+
+Apply filter context manipulation using the CALCULATE function
+
+Implement conditional logic using IF and nested IF functions
+
+Understand the interaction between slicers and DAX calculations
+
+Build structured, readable, and maintainable DAX formulas
+
+3. Introduction to DAX Functions
+
+DAX (Data Analysis Expressions) is a formula language used in Power BI to define calculations for measures, calculated columns, and tables. It is specifically designed to work with relational data models and enables complex analytical logic. DAX allows developers to control how data is aggregated, filtered, and evaluated across visuals, making Power BI dashboards interactive and context-aware.
+DAX Expression is the brain of the power-BI.
+
+4. Importance of DAX in Power BI
+
+DAX transforms Power BI from a visualization tool into a full analytical platform. While Power BI can generate basic summaries automatically, DAX enables the creation of business-specific metrics, KPIs, and performance indicators. It allows calculations to change dynamically based on slicers, filters, and user interaction, making reports more insightful and decision-oriented.
+
+5. Measures vs Drag-and-Drop Aggregations
+
+When a column is dragged into a visual, Power BI automatically creates an implicit measure, such as SUM or COUNT. Although this is quick and convenient, implicit measures provide limited control and are not reusable.
+
+Explicit measures, created manually using DAX, offer complete control over calculation logic. They can be reused across multiple visuals, modified centrally, and optimized for performance. For professional dashboards and enterprise reporting, explicit measures are always preferred over drag-and-drop aggregations.
+
+6. Power BI as a Dynamic Analytical Tool
+
+Power BI is inherently dynamic because all DAX measures are recalculated at query time. Whenever a slicer, filter, or visual interaction changes, Power BI automatically reevaluates the measures. This dynamic behavior allows users to explore data from multiple perspectives without modifying the underlying dataset.
+
+7. Analytical Thinking Before Measure Creation
+
+Before creating any visualization or measure, it is essential to clearly understand the analytical requirement. Measures should be driven by business questions such as totals, comparisons, trends, or performance thresholds. Defining these questions in advance ensures that DAX logic remains accurate, relevant, and aligned with reporting goals.
+
+8. Implicit and Explicit Measures
+
+Implicit measures are system-generated aggregations created when a column is added to a visual. These measures are limited in flexibility and not suitable for advanced analytics.
+
+Explicit measures are manually created using DAX formulas. They provide full control over logic, are reusable across reports, and follow best practices for professional Power BI development.
+
+9. Calculated Columns vs Measures
+
+Calculated columns are evaluated row by row and stored physically in the data model. Their values remain static until data refresh. Measures, on the other hand, are calculated dynamically based on filter context and user interaction. For analytical calculations and KPIs, measures are more efficient and scalable than calculated columns.
+
+10. Base Measures and Composite Measures
+
+Base measures are created directly from existing columns and represent fundamental calculations such as totals or counts. Composite measures are built using existing measures to derive advanced metrics. This layered approach improves clarity, reduces duplication, and ensures consistent calculations across the report.
+
+11. CALCULATE Function
+
+The CALCULATE function is the most powerful function in DAX. It evaluates an expression under a modified filter context. CALCULATE allows developers to apply custom filters within a measure, enabling segmented and conditional calculations.
+
+Filters applied in CALCULATE work only if proper relationships exist in the data model. Therefore, validating the data model is a critical prerequisite before writing advanced DAX measures.
+
+12. Filter Context and Model Relationships
+
+Filter context determines how DAX expressions are evaluated. When multiple filters are applied inside CALCULATE, they depend on correct relationships between fact and dimension tables. If a filter does not work as expected, it usually indicates missing, inactive, or incorrect relationships in the data model.
+
+13. Expressions in DAX
+
+In DAX, any formula that returns a single value is considered an expression. Expressions can return numeric, text, or Boolean values. Measures are built entirely using expressions, making them the foundation of all analytical calculations.
+
+14. Slicers in Power BI
+
+Slicers are visual filtering tools that allow users to interactively filter data across visuals. They apply filters globally at the report or page level and enhance user-driven exploration of data.
+
+15. CALCULATE vs Slicers
+
+Slicers apply filters externally and affect all visuals, whereas CALCULATE applies filters internally within a measure. Slicers cannot override the logic defined inside CALCULATE, but CALCULATE can override slicer-based filters when required. This distinction gives developers precise control over analytical logic.
+
+16. Conditional Logic in DAX
+
+Conditional functions such as IF allow DAX to perform logical evaluations similar to programming languages like Python. Conditional measures are useful for classification, performance evaluation, and rule-based analytics.
+
+Nested IF functions enable multiple condition checks but should be written carefully to maintain readability.
+
+17. DAX Formatting and Best Practices
+
+Proper formatting improves DAX readability and maintainability. Using clear measure names, consistent indentation, and modular logic ensures that measures are easy to understand, debug, and reuse. Following these best practices is essential for scalable Power BI development.
+
+18. Key Deliverables and Outcomes
+
+Developed a strong conceptual understanding of DAX
+
+Created reusable and dynamic measures
+
+Applied CALCULATE for advanced filtering logic
+
+Implemented conditional measures for performance evaluation
+
+Improved analytical thinking and data modeling awareness
+
+19. Conclusion
+
+Week 5 established the analytical backbone of the project by introducing DAX-driven calculations and logic. By mastering measures, filter context, and conditional expressions, Power BI dashboards evolved from simple visuals to intelligent analytical tools. This week laid the foundation for advanced time intelligence, KPI tracking, and executive-level reporting in subsequent phases of the internship.
+
+-- Total declarations
+Total Declarations = DISTINCTCOUNT(Declarations[declaration_id])
+
+-- Declarations this year
+Declarations YTD = 
+CALCULATE([Total Declarations], DATESYTD('Date'[Date]))
+
+-- Year-over-Year % change (requires Date table)
+Declarations YoY % = 
+VAR curr = [Total Declarations]
+VAR prev = CALCULATE([Total Declarations], SAMEPERIODLASTYEAR('Date'[Date]))
+RETURN
+IF(NOT ISBLANK(prev), (curr - prev) / prev, BLANK())
+
+-- Rolling 12-month declarations
+Rolling 12M Decls = 
+CALCULATE([Total Declarations], DATESINPERIOD('Date'[Date], MAX('Date'[Date]), -12, MONTH))
+
+-- Top 5 states (dynamic measure for visual)
+Top5 States Decls = 
+IF(
+    RANKX(ALLSELECTED(State[StateName]), [Total Declarations]) <= 5,
+    [Total Declarations],
+    BLANK()
+)
